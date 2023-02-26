@@ -30,7 +30,7 @@
             function summarizeText() {
                 const inputText = document.getElementById('input-text').value;
                 const xhr = new XMLHttpRequest();
-                xhr.open('POST', 'http://localhost:5002/generate_summary', true);
+                xhr.open('POST', 'https://8823-117-97-161-179.in.ngrok.io/generate_summary', true);
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
