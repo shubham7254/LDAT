@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="summarizer.css">
+
+<head>
+    <title>LDAT</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="home.html">Home</a>
+        <div class="center">Summarizer</div>
+        <a href="#about" style="float:right">About Us</a>
+    </div>
+
+    <div class="flex-parent-element">
+        <div class="flex-child-element Input">
+            <h2>Text</h2>
+            <textarea id="input-text" rows="2"></textarea><br>
+            <div class="buttoncontainer">
+                <button id="summarize-button" onclick="summarizeText()">Summarize</button>
+            </div>
+        </div>
+        <div class="flex-child-element Output">
+            <h2>Summary</h2>
+            <div id="summary"></div>
+        </div>
+    
+        <script>
+            function summarizeText() {
+                const inputText = document.getElementById('input-text').value;
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'http://localhost:5002/generate_summary', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        const response = JSON.parse(xhr.responseText);
+                        const summary = response.summary;
+                        document.getElementById('summary').innerText = summary;
+                    }
+                };
+                xhr.send('text=' + encodeURIComponent(inputText));
+            }
+        </script>
+    </body>
+    </html>
