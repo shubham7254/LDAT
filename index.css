@@ -27,7 +27,18 @@ body {
   font-size: 7vw;
   font-weight: 500;
 }
-
+@media (max-width: 480px) {
+  .header {
+    font-size: 7vw;
+    font-weight: 500;
+  }
+}
+@media (min-width: 1025px) {
+  .header {
+    font-size: 10vw;
+    font-weight: 700;
+  }
+}
 .subheading {
   text-align: center;
   font-size: 4vw;
