@@ -76,12 +76,19 @@ body {
   .topnav a.right {
     float: right;
   }
+  .Bottomcontainer{
+    padding: 1px;
+    background-color: rgba(249, 249, 249, 0.583);
+  }
+  .listofoffers{
+    margin-top: 1%;
+  }
 
   .Bottomcontainer h1 {
     color: #000000;
     padding: 1%;
     font-size: 3vw;
-    background-color: rgba(249, 249, 249, 0.583);
+    font-weight: 100;
     text-align: center;
   }
 
@@ -91,93 +98,8 @@ body {
     justify-items: left;
     padding: 2%;
   }
-}
-
-/* Media Query for Large screens */
-@media (min-width: 1281px) {
-  body {
-    background-image: url(backgroundlegal.jpeg);
-    background-repeat: repeat-y;
-  }
-
-  .topnav {
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
-    display: flex;
-    overflow: hidden;
-    background-color: #d4d1d4bd;
-    top: 0;
-    width: 100%;
-  }
-
-  /* Style the links in the navigation bar */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #582013;
-    text-align: center;
-    padding: 25px 35px;
-    font-size: 1.5vw;
-    text-decoration: none;
-  }
-
-  /* Change color of links on hover */
-  .topnav a:hover {
-    background-color: #5f5959a4;
-    color: rgb(205, 185, 185);
-  }
-
-  /* Add an active class to the active link */
-  .active {
-    background-color: #4d3b2445;
-  }
-
-  /* Center the "Summarize" text */
-  .topnav .center {
-    flex: 1;
-    display: block;
-    color: #000000;
-    text-align: center;
-    font-weight: 700;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 14px 16px;
-    font-size: 13px;
-    text-decoration: none;
-  }
-
-  /* Right-align the "About Us" link */
-  .topnav a.right {
-    float: right;
-  }
-
-  .header h1 {
-    color: #000000e4;
-    font-size: 4vw;
-    font-weight: 400;
-  }
-
-  .header h3 {
-    color: #000000cb;
-    font-size: 2.5vw;
-    font-weight: 200;
-  }
-
-  .Bottomcontainer h1 {
-    background-color: rgba(249, 249, 249, 0.583);
-    color: #000000;
-    padding: 1%;
-    font-size: 2vw;
-    font-weight: 100;
-    text-align: center;
-  }
-
-  .listofoffers a {
-    font-size: 1.5vw;
-    text-decoration: none;
-    color: #252424;
-    justify-items: left;
-    padding: 2%;
+  .listofoffers a:hover{
+    color: #f0e4e4;
   }
 }
 /* Media Query for Tablets Ipads portrait mode */
@@ -247,15 +169,21 @@ body {
     font-size: 4vw;
     font-weight: 200;
   }
+  .Bottomcontainer{
+    text-align: center;
+    background-color: rgba(249, 249, 249, 0.583);
+  }
+  .listofoffers{
+    margin-top: 1%;
+  }
+
 
   .Bottomcontainer h1 {
-    background-color: rgba(249, 249, 249, 0.583);
     color: #000000;
     padding: 1%;
     font-size: 2vw;
     margin-top: 6%;
     font-weight: 100;
-    text-align: center;
   }
 
   .listofoffers a {
@@ -264,5 +192,103 @@ body {
     color: #d5d4d4f5;
     justify-items: left;
     padding: 2%;
+  }
+  .listofoffers a:hover{
+    color: #f0e4e4;
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  body {
+    background-image: url(backgroundlegal.jpeg);
+    background-repeat: repeat-y;
+  }
+
+  .topnav {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    display: flex;
+    overflow: hidden;
+    background-color: #d4d1d4bd;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Style the links in the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #582013;
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 1.5vw;
+    text-decoration: none;
+  }
+
+  /* Change color of links on hover */
+  .topnav a:hover {
+    background-color: #5f5959a4;
+    color: rgb(205, 185, 185);
+  }
+
+  /* Add an active class to the active link */
+  .active {
+    background-color: #4d3b2445;
+  }
+
+  /* Center the "Summarize" text */
+  .topnav .center {
+    flex: 1;
+    display: block;
+    color: #000000;
+    text-align: center;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 14px 16px;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  /* Right-align the "About Us" link */
+  .topnav a.right {
+    float: right;
+  }
+
+  .header h1 {
+    color: #000000e4;
+    font-size: 4vw;
+    font-weight: 400;
+  }
+
+  .header h3 {
+    color: #000000cb;
+    font-size: 2.5vw;
+    font-weight: 200;
+  }
+  .Bottomcontainer{
+    padding: 5px;
+    background-color: rgba(249, 249, 249, 0.583);
+  }
+  .listofoffers{
+    margin-top: 1%;
+  }
+
+  .Bottomcontainer h1 {
+    color: #000000;
+    font-size: 2vw;
+    font-weight: 100;
+    text-align: center;
+  }
+  .listofoffers a {
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #252424;
+    margin: 2%;
+    justify-items: left;
+  }
+  .listofoffers a:hover{
+    color: #f0e4e4;
   }
 }
