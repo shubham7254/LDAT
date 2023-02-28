@@ -38,9 +38,9 @@
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         const response = JSON.parse(xhr.responseText);
-                        const summary = response.summary;
+                        const entities = response.entities;
                         document.getElementById('summary').innerText = summary;
-                        document.getElementByID('summary').innerText = entities;
+                        document.getElementById('summary').innerText = JSON.stringify(entities);
                     }
                 };
                 xhr.send('text=' + encodeURIComponent(inputText));
