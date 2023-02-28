@@ -38,10 +38,10 @@
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         const response = JSON.parse(xhr.responseText);
-                        const entities = response.entities;
-                        document.getElementById('summary').innerText = summary;
-                        document.getElementById('summary').innerText = JSON.stringify(entities);
-                    }
+                        const entities = JSON.stringify(response.entities);
+                        const summary = response.summary;
+                        document.getElementById('summary').innerText = entities + '\n\n' + summary;
+            }
                 };
                 xhr.send('text=' + encodeURIComponent(inputText));
             }
