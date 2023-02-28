@@ -40,6 +40,7 @@
                         const response = JSON.parse(xhr.responseText);
                         const summary = response.summary;
                         document.getElementById('summary').innerText = summary;
+                        document.getElementByID('summary').innerText = entities;
                     }
                 };
                 xhr.send('text=' + encodeURIComponent(inputText));
