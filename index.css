@@ -65,7 +65,7 @@ body {
     display: block;
     color: #000000;
     text-align: center;
-    font-weight: 700;
+    font-weight: 100;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 14px 16px;
     font-size: 13px;
@@ -201,59 +201,33 @@ body {
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
   body {
-    background-image: url(backgroundlegal.jpeg);
-    background-repeat: repeat-y;
+   background-image: url(backgroundlegal.jpeg);
   }
 
   .topnav {
     position: -webkit-sticky;
     /* Safari */
-    position: sticky;
-    display: flex;
-    overflow: hidden;
-    background-color: #d4d1d4bd;
-    top: 0;
-    width: 100%;
-  }
-
-  /* Style the links in the navigation bar */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #582013;
-    text-align: center;
-    padding: 20px 30px;
+    position:relative;
     font-size: 1.5vw;
-    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    background-color: #4d3b2445;
+    top: 0;
   }
-
-  /* Change color of links on hover */
+  .topnav .left{
+    float: left;
+  }
+  .topnav a{
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #582013;
+  }
+  .topnav .right{
+    float: right;
+  }
   .topnav a:hover {
     background-color: #5f5959a4;
     color: rgb(205, 185, 185);
-  }
-
-  /* Add an active class to the active link */
-  .active {
-    background-color: #4d3b2445;
-  }
-
-  /* Center the "Summarize" text */
-  .topnav .center {
-    flex: 1;
-    display: block;
-    color: #000000;
-    text-align: center;
-    font-weight: 700;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 14px 16px;
-    font-size: 13px;
-    text-decoration: none;
-  }
-
-  /* Right-align the "About Us" link */
-  .topnav a.right {
-    float: right;
   }
 
   .header h1 {
