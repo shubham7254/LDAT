@@ -269,12 +269,14 @@ body{
     flex: 1;
     padding: 1px;
     border:#000000 solid 1px;
+    max-height: 400px;
+    background-color: rgba(255, 255, 255, 0.668);
+    overflow-y: scroll;
   }
   #summary{
     resize: none;
     width: 500px;
     height:400px;
-    background-color: rgba(255, 255, 255, 0.668);
     scrollbar-track-color: black;
     scroll-behavior: smooth;
   }
@@ -287,6 +289,4 @@ body{
     font-size: 1.5vw;
     font-weight: 500;
   }
-
-
 }
