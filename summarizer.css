@@ -174,7 +174,8 @@ body{
     background-color: rgba(251, 251, 251, 0.868);
     width: 500px;
     height:300px;
-    scroll-behavior: auto;
+    scrollbar-track-color: black;
+    scroll-behavior: smooth;
   }
   .buttoncontainer{
     display: block;
