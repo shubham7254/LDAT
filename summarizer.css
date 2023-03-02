@@ -184,6 +184,116 @@ body{
   }
 }
 
+ /* Media Query for Laptops and Desktops */
+ @media (min-width: 1025px) and (max-width: 1280px){
+  body {
+    background-image: url(backgroundlegal.jpeg);
+    background-repeat: repeat-y;
+  }
+  .topnav {
+    position: -webkit-sticky;
+    /* Safari */
+    position:relative;
+    font-size: 1.5vw;
+    display: block;
+    overflow: hidden;
+    background-color: #4d3b2445;
+    top: 0;
+  }
+  .topnav .left{
+    float: left;
+  }
+  .topnav a{
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #582013;
+  }
+  .topnav .right{
+    float: right;
+  }
+  .topnav a:hover {
+    background-color: #5f5959a4;
+    color: rgb(205, 185, 185);
+  }
+  .flex-parent-element{
+    display:flex;
+    padding: 15px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .flex-child-element_Input{
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-child-element_Input h2{
+    display: block;
+    font-size: 3vw;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  .inputboxcontainer{
+    flex: 1;
+    padding: 1px;
+  }
+  #input-text{
+    resize: none;
+    width: 500px;
+    height:400px;
+    scrollbar-track-color: black;
+    scroll-behavior: smooth;
+  }
+  .flex-child-element_Output{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-child-element_Output h2{
+    display: block;
+    font-size: 3vw;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+  }
+  .outputboxcontainer{
+    flex: 1;
+    padding: 1px;
+    border:#000000 solid 1px;
+    max-height: 400px;
+    background-color: rgba(255, 255, 255, 0.668);
+    overflow-y: scroll;
+  }
+  #summary{
+    resize: none;
+    width: 500px;
+    height:400px;
+    scrollbar-track-color: black;
+    scroll-behavior: smooth;
+  }
+  .buttoncontainer{
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+  #summarize-button{
+    font-size: 1.5vw;
+    font-weight: 500;
+  }
+}
+
+
+
+
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
   body {
