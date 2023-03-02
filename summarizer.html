@@ -23,29 +23,58 @@
             <h2>Summary</h2>
             <div class="outputboxcontainer">
                 <div id="summary"></div>
+                <div id="progress-bar" style="display:none">
+                    <div id="progress" style="width: 0%"></div>
+                </div>
             </div>
         </div>
     </div>
     <div class="buttoncontainer">
         <button id="summarize-button" onclick="summarizeText()" style="padding: 5px;">Summarize</button>
     </div>
-        <script>
-            function summarizeText() {
-                const inputText = document.getElementById('input-text').value;
-                const xhr = new XMLHttpRequest();
-                xhr.open('POST', 'https://8b32-2401-4900-502a-54b-10b5-32fc-5729-67a6.in.ngrok.io/generate_summary', true);
-                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        const response = JSON.parse(xhr.responseText);
-                        const entities = JSON.stringify(response.entities);
-                        const summary = response.summary;
-                        document.getElementById('summary').innerText = entities + '\n\n' + summary;
-            }
-                };
-                xhr.send('text=' + encodeURIComponent(inputText));
-            }
-        </script>
+    <script>
+        function summarizeText() {
+            const inputText = document.getElementById('input-text').value;
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://eb7c-2401-4900-502a-54b-e036-1880-216b-6aa6.in.ngrok.io/generate_summary', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    const entities = JSON.stringify(response.entities);
+                    const summary = response.summary;
+                    document.getElementById('summary').innerText = entities + '\n\n' + summary;
+                    hideProgressBar();
+                }
+            };
+            xhr.send('text=' + encodeURIComponent(inputText));
+            showProgressBar();
+        }
+
+        function showProgressBar() {
+            const progressBar = document.getElementById('progress-bar');
+            progressBar.style.display = 'block';
+            const progress = document.getElementById('progress');
+            let width = 0;
+            const interval = setInterval(function () {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width += 10;
+                    progress.style.width = width + '%';
+                }
+            }, 500);
+        }
+
+        function hideProgressBar() {
+            const progressBar = document.getElementById('progress-bar');
+            progressBar.style.display = 'none';
+            const progress = document.getElementById('progress');
+            progress.style.width = '0%';
+        }
+    </script>
+
 </body>
 
 </html>
+
