@@ -197,6 +197,75 @@ body {
     color: #f0e4e4;
   }
 }
+ /* Media Query for Laptops and Desktops */
+        @media (min-width: 1025px) and (max-width: 1280px){
+           body {
+   background-image: url(backgroundlegal.jpeg);
+  }
+
+  .topnav {
+    position: -webkit-sticky;
+    /* Safari */
+    position:relative;
+    font-size: 1.5vw;
+    display: block;
+    overflow: hidden;
+    background-color: #4d3b2445;
+    top: 0;
+  }
+  .topnav .left{
+    float: left;
+  }
+  .topnav a{
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #582013;
+  }
+  .topnav .right{
+    float: right;
+  }
+  .topnav a:hover {
+    background-color: #5f5959a4;
+    color: rgb(205, 185, 185);
+  }
+
+  .header h1 {
+    color: #000000e4;
+    font-size: 4vw;
+    font-weight: 400;
+  }
+
+  .header h3 {
+    color: #000000cb;
+    font-size: 2.5vw;
+    font-weight: 200;
+  }
+  .Bottomcontainer{
+    padding: 5px;
+    background-color: rgba(249, 249, 249, 0.583);
+  }
+  .listofoffers{
+    margin-top: 1%;
+  }
+
+  .Bottomcontainer h1 {
+    color: #000000;
+    font-size: 2vw;
+    font-weight: 100;
+    text-align: center;
+  }
+  .listofoffers a {
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #252424;
+    margin: 2%;
+    justify-items: left;
+  }
+  .listofoffers a:hover{
+    color: #f0e4e4;
+  }
+}
+
 
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
